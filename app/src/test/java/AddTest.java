@@ -44,10 +44,10 @@ public class AddTest {
     @Test
     public void countCitiesTest() {
         City city1 = new City("Halifax", "NS");
-        list.add(city1);
+        list.addCity(city1);
         assertEquals(list.countCities(), 1);
         City city2 = new City("Edmonton", "AB");
-        list.add(city2);
+        list.addCity(city2);
         assertEquals(list.countCities(), 2);
     }
 }
