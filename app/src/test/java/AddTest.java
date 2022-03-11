@@ -26,7 +26,8 @@ public class AddTest {
 
     @Test
     public void hasCityTest() {
-        list.addCity(new City("Halifax", "NS"));
-        assertTrue(list.hasCity(new City("Halifax", "NS")));
+        City city = new City("Halifax", "NS");
+        list.addCity(city);
+        assertTrue(list.hasCity(city));
     }
 }
