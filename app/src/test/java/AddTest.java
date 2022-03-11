@@ -33,11 +33,21 @@ public class AddTest {
     }
 
     @Test
-    public void deleteCity() {
+    public void deleteCityTest() {
         City city = new City("Halifax", "NS");
         list.addCity(city);
         assertTrue(list.hasCity(city));
         list.deleteCity(city);
         assertFalse(list.hasCity(city));
+    }
+
+    @Test
+    public void countCitiesTest() {
+        City city1 = new City("Halifax", "NS");
+        list.add(city1);
+        assertEquals(list.countCities(), 1);
+        City city2 = new City("Edmonton", "AB");
+        list.add(city2);
+        assertEquals(list.countCities(), 2);
     }
 }
